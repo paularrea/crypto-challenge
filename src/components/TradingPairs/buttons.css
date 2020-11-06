@@ -33,3 +33,18 @@
     height: 50%;
     background-color: #142430;
 }
+
+@media (max-width: 600px) {
+    .btn-container{
+        width: 89vw;
+        padding: 2%;
+        padding-top: 0;
+    }
+    .container-title{
+        padding: 2%;
+        padding-bottom: 0;
+    }
+    .title{
+        padding: 2%;
+    }
+    }
