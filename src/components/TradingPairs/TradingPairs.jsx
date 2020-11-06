@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./buttons.css";
+import GJNumbersView from "../GJNumbersView​/GJNumbersView";
 
 const TradingPairs = () => {
   const [data, setData] = useState();
@@ -21,21 +22,29 @@ const TradingPairs = () => {
   };
   return (
     <div className="right">
-        <div className='text-center title'><h5>Trading Pairs</h5></div>
-      <div className="btn-container w-100 bg-secondary row text-center">
-        {data !== undefined &&
-          data.map((item) => (
-            <div key={item.name} className="col-12 col-md-6 p-0">
-              <button
-                onClick={() => onClick({ item })}
-                className="btn button btn-outline-light"
-              >
-                {item.name}
-              </button>
-            </div>
-          ))}
+      <div className="container-title w-100">
+        <div className="text-center title">
+          <h5>Trading Pairs</h5>
+        </div>
       </div>
-      <div className="w-100 bg-primary values">Hello</div>
+      <div className="btn-container">
+        <div className="but row text-center">
+          {data !== undefined &&
+            data.map((item) => (
+              <div key={item.name} className="col-12 col-md-6 p-0">
+                <button
+                  onClick={() => onClick({ item })}
+                  className="btn button btn-outline-light"
+                >
+                  {item.name}
+                </button>
+              </div>
+            ))}
+        </div>
+      </div>
+      <div className="w-100 values">
+        <GJNumbersView selectedBitstamp={selectedBitstamp} />
+      </div>
     </div>
   );
 };

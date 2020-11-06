@@ -1,0 +1,44 @@
+.sb-container{
+    background-color: #0e1922;
+    height: 100%;
+    width: 100%;
+    padding-left: 2%;
+}
+
+.selected_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #142430;
+    height: 100%;
+    width: 100%;
+}
+
+.selected_container p {
+    padding-bottom: 4%;
+    font-size: 1.2rem;
+}
+
+.selected_container h1 {
+    padding-bottom: 5%;
+}
+
+.bitstamp_name{
+    font-size: 1.5rem !important;
+    color: gray;
+}
+
+.green{
+    color: #18D468;
+}
+
+.red{
+    color: #C14743;
+}
+
+@media (max-width: 600px) {
+    .sb-container{
+        margin: 2% 10%;
+        margin-top: 5%;
+    }
+    }
