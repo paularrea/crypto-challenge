@@ -1,0 +1,23 @@
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    padding: 2%;
+}
+
+.average{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons{
+    height: 50vh;
+}
+
+.right{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
