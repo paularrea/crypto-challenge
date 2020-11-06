@@ -1,0 +1,22 @@
+.btn-container{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 50vw;
+    height: 50vh !important;
+}
+
+.title{
+    background-color: #142430;
+    width: 100%;
+    padding: 1% 0;
+}
+
+.button{
+    width: 85%;
+    margin: 2% 0;
+    padding: 5% 0;
+}
+
+.values{
+    height: 50%;
+}
