@@ -2,8 +2,8 @@
 
 After pulling the repo:
 
-# `npm install`
-# `npm start`
+#### `npm install`
+#### `npm start`
 
 To run the app in your local.
 
@@ -11,7 +11,7 @@ To run the app in your local.
 
 First of all I tested if I was getting response of all the url. I was getting some truble with CORS because some of the apis didn't have a Access-Control-Allow-Origin value in place that permits the web application domain to access it. So instead, of sending the GET request to the url I send it to:
 
-### `https://cors-anywhere.herokuapp.com/{url}` 
+#### `https://cors-anywhere.herokuapp.com/{url}` 
 
 ### AVERAGE TICKER VALUES
 
