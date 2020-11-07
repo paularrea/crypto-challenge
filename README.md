@@ -2,6 +2,7 @@
 
 After pulling the repo:
 
+#### Enable CORS in local machine with Google Chrom Extension (Moesif Cors)
 #### `npm install`
 #### `npm start`
 
@@ -9,9 +10,8 @@ To run the app in your local.
 
 ## The Challenge
 
-First of all I tested if I was getting response of all the url. I was getting some truble with CORS because some of the apis didn't have a Access-Control-Allow-Origin value in place that permits the web application domain to access it. So instead, of sending the GET request to the url I send it to:
+First of all I tested if I was getting response of all the url. I was getting some truble with CORS because some of the apis didn't have a Access-Control-Allow-Origin value in place that permits the web application domain to access it. With the google Chrome extension Moesif CORS you can enable cors in your local machine.
 
-#### `https://cors-anywhere.herokuapp.com/{url}` 
 
 ### AVERAGE TICKER VALUES
 

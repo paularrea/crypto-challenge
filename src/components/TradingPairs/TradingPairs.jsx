@@ -7,8 +7,7 @@ const TradingPairs = () => {
   const [data, setData] = useState();
   const [selectedBitstamp, setSelectedBitstamp] = useState("");
 
-  const enableCors = 'https://cors-anywhere.herokuapp.com/';
-  const url = enableCors + "https://www.bitstamp.net/api/v2/trading-pairs-info/";
+  const url = "https://www.bitstamp.net/api/v2/trading-pairs-info/";
 
   useEffect(() => {
     const fetchData = async () => {
