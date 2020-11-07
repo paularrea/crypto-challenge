@@ -2,7 +2,7 @@
 
 After pulling the repo:
 
-#### Enable CORS in local machine with Google Chrom Extension (Moesif Cors)
+#### Enable CORS in local machine with Google Chrome Extension (Moesif Cors)
 #### `npm install`
 #### `npm start`
 
@@ -29,3 +29,4 @@ Each button has an onClick event that displays below the all the info of the sel
 ### Deployment
 
 I deployed the app with Netlify. You can see the site here --> https://crypto-challenge.netlify.app/
+Remember to enable CORS in local machine with Google Chrome Extension (Moesif Cors).
