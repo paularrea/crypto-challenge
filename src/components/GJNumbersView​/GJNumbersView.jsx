@@ -22,6 +22,7 @@ const GJNumbersView = (props) => {
       fetchData();
     }, 500);
     return () => clearInterval(interval);
+    // eslint-disable-next-line
   }, [selectedItem]);
 
 

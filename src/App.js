@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AvgTicker from "./components/Average/AvgTicker";
 import TradingPairs from "./components/TradingPairs/TradingPairs";
 
+
 function App() {
   return (
     <div className='app'>
@@ -11,7 +12,7 @@ function App() {
           <AvgTicker />
         </div>
         <div className="col-md-6 col-xs-12 p-0">
-          <TradingPairs />
+          <TradingPairs/>
         </div>
       </div>
     </div>

@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Crypto Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+After pulling the repo:
 
-## Available Scripts
+# `npm install`
+# `npm start`
 
-In the project directory, you can run:
+To run the app in your local.
 
-### `yarn start`
+## The Challenge
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+First of all I tested if I was getting response of all the url. I was getting some truble with CORS because some of the apis didn't have a Access-Control-Allow-Origin value in place that permits the web application domain to access it. So instead, of sending the GET request to the url I send it to:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `https://cors-anywhere.herokuapp.com/{url}` 
 
-### `yarn test`
+### AVERAGE TICKER VALUES
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get the average value for the BTC/USD, I created a function, using the axios library, to fetch the data of the 3 urls provided. Using the useState to get the data of every one of the APIs and useEffect, setting an interval of 0.5s, to call the APIs.
 
-### `yarn build`
+I collect the interested values from every url. The types where different, 2 of them where strings and the other one a number. So, I convert the strings to numbers with parseFloat() to have an array of numbers, to operate and get the average value. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### TRADING PAIRS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To display all the trading pairs buttons I did the same thing fetching the url and setting an interval when calling the api. Then maping the data from https://www.bitstamp.net/api/v2/trading-pairs-info/ and display the name of each trading pairs in a buttons list.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Each button has an onClick event that displays below the all the info of the selected trading pair. This event pass in the state of a hook (selectedBitstamp) the name of the selected trading pair trough props to the GJNumbersView component that gets the selected item data and fecth its corresponding values.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I deployed the app with Netlify. You can see the site here --> 

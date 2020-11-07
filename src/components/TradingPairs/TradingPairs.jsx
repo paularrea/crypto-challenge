@@ -17,9 +17,19 @@ const TradingPairs = () => {
     fetchData();
   }, [url]);
 
+  const handleScroll = () => {
+    window.scroll({
+      top: document.body.offsetHeight,
+      left: 0, 
+      behavior: 'smooth',
+    });
+  };
+  
   const onClick = (value) => {
     setSelectedBitstamp(value.item);
+    handleScroll();
   };
+
   return (
     <div className="right">
       <div className="container-title w-100">

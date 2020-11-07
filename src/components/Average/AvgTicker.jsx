@@ -11,9 +11,9 @@ const AvgTicker = () => {
   const bitfinexAPI = "https://api-pub.bitfinex.com/v2/tickers?symbols=tBTCUSD";
 
   const fetchData = async () => {
-    const res1 = await axios(bitstampAPI);
-    const res2 = await axios(coinbaseAPI);
-    const res3 = await axios(bitfinexAPI);
+    const res1 = await axios.get(bitstampAPI);
+    const res2 = await axios.get(coinbaseAPI);
+    const res3 = await axios.get(bitfinexAPI);
     setBitstampData(res1.data);
     setCoinbaseData(res2.data);
     setBitfinexData(res3.data);
@@ -41,8 +41,16 @@ const AvgTicker = () => {
   return (
     <div>
       <div>
-        <p className="m-0 text-center">BTC/USD</p>
-        <h2 className="m-0 text-center">{average && average}</h2>
+        <div className="api">
+          <p>Bitstamp : <span>{bitstampNum}</span></p>
+          <p>Coinbase : <span>{coinbaseNum}</span></p>
+          <p>Bitfinex : <span>{bitfinexNum}</span></p>
+        </div>
+        <div className='average-container'>
+               <p className="m-0 text-center">BTC/USD</p>
+        <h2 className="m-0 text-center">{average && average}</h2>   
+        </div>
+
       </div>
     </div>
   );
