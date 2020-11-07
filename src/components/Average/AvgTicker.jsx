@@ -6,9 +6,11 @@ const AvgTicker = () => {
   const [coinbaseData, setCoinbaseData] = useState();
   const [bitfinexData, setBitfinexData] = useState();
 
-  const bitstampAPI = "https://www.bitstamp.net/api/v2/ticker/btcusd";
-  const coinbaseAPI = "https://api.coinbase.com/v2/exchange-rates?currency=BTC";
-  const bitfinexAPI = "https://api-pub.bitfinex.com/v2/tickers?symbols=tBTCUSD";
+  const enableCors = 'https://cors-anywhere.herokuapp.com/';
+
+  const bitstampAPI = enableCors + "https://www.bitstamp.net/api/v2/ticker/btcusd";
+  const coinbaseAPI = enableCors + "https://api.coinbase.com/v2/exchange-rates?currency=BTC";
+  const bitfinexAPI = enableCors + "https://api-pub.bitfinex.com/v2/tickers?symbols=tBTCUSD";
 
   const fetchData = async () => {
     const res1 = await axios.get(bitstampAPI);

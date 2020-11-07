@@ -28,4 +28,4 @@ Each button has an onClick event that displays below the all the info of the sel
 
 ### Deployment
 
-I deployed the app with Netlify. You can see the site here --> 
+I deployed the app with Netlify. You can see the site here --> https://crypto-challenge.netlify.app/

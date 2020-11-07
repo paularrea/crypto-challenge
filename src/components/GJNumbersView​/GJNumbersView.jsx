@@ -7,8 +7,10 @@ const GJNumbersView = (props) => {
   let selectedItem =
     props.selectedBitstamp !== "" && props.selectedBitstamp.url_symbol;
 
+  const enableCors = 'https://cors-anywhere.herokuapp.com/';
+
   const fetchData = async () => {
-    const selectedButton = await axios.get(
+    const selectedButton = await axios.get(enableCors +
       `https://www.bitstamp.net/api/v2/ticker/${
         selectedItem ? selectedItem : "btcusd"
       }`
